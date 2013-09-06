@@ -96,6 +96,8 @@
 %   \restartlist{bibenum}
 %
 %   at the place where you want the numbering to reset.
+\usepackage{bibentry}
+\nobibliography*
 
 \makeatletter
 \newlength{\bibhang}
@@ -443,8 +445,8 @@ Colorado Springs, CO
 \begin{lonelist}
 
 \item[] \textit{Lead Test Engineer, Guidance, Navigation, \& Control Group \\}
-\textit{Air Force Research Laboratory}%
-    \hfill \textbf{August~2011 to July~2014}
+\textit{Air Force Research Laboratory (AFRL/RVSVC)}%
+    \hfill \textbf{August~2011 to Present}
     \begin{innerlist}
         \item Created orbit determination software for geo-stationary GPS receiver validation
 	\item Designed astrodynamics force model for AFRL satellite science experiment
@@ -456,18 +458,24 @@ Colorado Springs, CO
     \end{innerlist}
 
 \item[] \textit{Deputy Space Vehicles Lead, Responsive Space Squadron\\}
-	\textit{Space Development and Test Directorate}%
+	\textit{Space Development and Test Directorate (SDTD/SDDR)}%
     \hfill \textbf{May 2009 to August 2011}
     
     \begin{innerlist}
         \item Responsible for development, integration, test, \& launch of ORS-1 (Operationally Responsive Space) satellite which was the first operational satellite developed under the ORS office and supports US Central Command Battlespace Awareness
         \item Extensive experience with technical management of diverse contractor/government teams leading to successful ORS-1 launch and operations
         \item Resolved \$600K satellite flight sensor issues and prevented ORS-1 launch delays by ensuring vital hardware repairs were completed correctly.
-	\item First hand experience monitoring 100+ days of integration and testing of ORS-1 satellite leading to on-time launch from Wallops Island, VA on 29 June 2011
+	\item Firsthand experience monitoring 100+ days of integration and testing of ORS-1 satellite leading to on-time launch from Wallops Island, VA on 29 June 2011
 	\item Assessed and served as on-site government inspector of 200+ satellite test plans dealing with crucial flight hardware leading to successful test campaign and mitigated possible launch delays
     \end{innerlist}
 
 \end{lonelist}
+
+\section{Conference Presentations} 
+	
+\begin{innerlist}
+	\item \bibentry{Kulumani2013}
+\end{innerlist}
 
 \section{Professional Memberships}
 
@@ -612,6 +620,11 @@ Department of Defense Top Secret SCI (awarded: 2010)
 %More information and auxiliary documents can be found at\\%
 %\url{http://www.tedpavlic.com/facjobsearch/}.
 %
+
+\bibliographystyle{plain}
+%\bibliography{library}
+\nobibliography{library}
+
 \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
