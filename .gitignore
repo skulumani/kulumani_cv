@@ -6,3 +6,8 @@
 
 *.gz
 
+*.bbl
+
+*.pdf
+
+desktop.ini
