@@ -75,50 +75,9 @@
 % Provides special list environments and macros to create new ones
 \usepackage[shortlabels]{enumitem}
 
-% Simpler bibsections for CV sections
-% (thanks to natbib for inspiration)
-%
-% * For lists of references with hanging indents and no numbers:
-%
-%   \begin{bibsection}
-%       \item ...
-%   \end{bibsection}
-%
-% * For numbered lists of references (with hanging indents):
-%
-%   \begin{bibenum}
-%       \item ...
-%   \end{bibenum}
-%
-%   Note that bibenum numbers continuously throughout. To reset the
-%   counter, use
-%
-%   \restartlist{bibenum}
-%
-%   at the place where you want the numbering to reset.
+\usepackage{natbib}
 \usepackage{bibentry}
-\nobibliography*
 
-\makeatletter
-\newlength{\bibhang}
-\setlength{\bibhang}{1em}
-\newlength{\bibsep}
- {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
-\newlist{bibsection}{itemize}{3}
-\setlist[bibsection]{label=,leftmargin=\bibhang,%
-        itemindent=-\bibhang,
-        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
-        topsep=0pt}
-\newlist{bibenum}{enumerate}{3}
-\setlist[bibenum]{label=[\arabic*],resume,leftmargin={\bibhang+\widthof{[999]}},%
-        itemindent=-\bibhang,
-        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
-        topsep=0pt}
-\let\oldendbibenum\endbibenum
-\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
-\let\oldendbibsection\endbibsection
-\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
-\makeatother
 
 %% Reference the last page in the page number
 %
@@ -305,7 +264,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\makeheading{Capt~Shankar~Kulumani}
+\bibliographystyle{plain}
+%\bibliography{library}
+\nobibliography{../../../technical_papers/bibtex/library}
+
+\makeheading{Shankar~Kulumani}
 
 \section{Contact Information}
 
@@ -326,8 +289,8 @@
 
 % Address box
 \parbox{\textwidth-\rcollength-\spacewidth}{%
-1818 Anderson PL SE\\
-Albuquerque, NM  87108  USA}
+2800 Woodley Rd NW Apt 215\\
+Washington, DC  20008  USA}
 &
 % Uncomment to add a vertical bar in middle of contact information
 %{\vrule width 0.5pt}
@@ -362,8 +325,8 @@ Albuquerque, NM  87108  USA}
 
 \section{Research Interests}
 
-\textbf{Astronautical Engineering with applications in control systems theory:}
-Focus on spacecraft attitude dynamics and control, estimation and orbit determination
+\textbf{Astronautical engineering with applications in control systems theory:}
+Focus on astrodynamics, spacecraft attitude dynamics and control, and optimization
 
 %\section{Academic Appointments}
 %
@@ -409,8 +372,19 @@ Focus on spacecraft attitude dynamics and control, estimation and orbit determin
 
 \section{Education}
 
-\href{http://www.purdue.edu/}{\textbf{Purdue University}},
-West Lafayette, IN
+\href{http://www.gwu.edu/}{\textbf{George Washington University}}, Washington, DC
+\hfill \textbf{August 2014 to Present}
+\begin{lonelist}
+
+\item[] PhD, \href{http://www.mae.seas.gwu.edu/}{Mechanical and Aerospace Engineering}
+        \begin{innerlist}
+        	\item[] Area of Study: Dynamics and Control 
+        \end{innerlist}
+\end{lonelist}
+
+\blankline
+
+\href{http://www.purdue.edu/}{\textbf{Purdue University}}, West Lafayette, IN
 \hfill \textbf{January 2011 to December 2013}
 \begin{lonelist}
 
@@ -418,42 +392,59 @@ West Lafayette, IN
         \href{https://engineering.purdue.edu/AAE}
         {Aeronautical and Astronautical Engineering}
         \begin{innerlist}
-        	\item Overall GPA: 3.7/4.0
-        	\item Area of Study: Spacecraft Dynamics and Control 
+        	\item[] Overall GPA: 3.7/4.0
+        	\item[] Area of Study: Astrodynamics, Analytical Mechanics 
         \end{innerlist}
 \end{lonelist}
 
 \blankline
 
-\href{http://www.usafa.af.mil/}{\textbf{United States Air Force Academy}},
-Colorado Springs, CO 
+\href{http://www.usafa.af.mil/}{\textbf{United States Air Force Academy}}, Colorado Springs, CO 
 \hfill \textbf{June 2005 to May 2009}
 \begin{lonelist}
 \item[] B.S.,
         \href{http://www.usafa.edu/df/dfas/}
              {Astronautical Engineering}
         \begin{innerlist}
-			\item Overall GPA: 3.4/4.0
+			\item[] Overall GPA: 3.4/4.0
         \end{innerlist}
 
 \end{lonelist}
 
+\section{Qualifications and Skills}
+
+Proficient with \Matlab, UNIX shell scripting, DVCS (Git), \TeX{} (\LaTeX{}, \BibTeX{}) \\
+Experience with the JPL produced SPICE package and Satellite Toolkit (STK) \\
+Proficient with AutoCAD, SolidWorks \\
+Experience with Vicon/PhaseSpace motion capture systems
+
 \section{Professional Experience}
+
+\textbf{George Washington University}, Washington DC
+	\begin{lonelist}
+		\item[] \textit{Graduate Research/Teaching Assistant} \hfill \textbf{August~2014 to Present}
+		\begin{innerlist}
+			\item Graduate teaching assistant for Engineering Drawing and Computer graphics course. Responsible for teaching and grading technical drawing assignments
+			\item Performing research in the Flight Dynamics and Control laboratory with applications in optimal control and low energy orbital transfers. 
+		\end{innerlist}
+
+	\end{lonelist}
+	
+\blankline
 
 \textbf{United States Air Force}, Kirtland AFB, NM
 \begin{lonelist}
 
-\item[] \textit{Lead Test Engineer, Guidance, Navigation, \& Control Group \\}
+\item[] \textit{Captain, Lead Test Engineer, Guidance, Navigation, \& Control Group \\}
 \textit{Air Force Research Laboratory (AFRL/RVSVC)}%
-    \hfill \textbf{August~2011 to Present}
+    \hfill \textbf{August~2011 to July~2014}
     \begin{innerlist}
-        \item Created orbit determination software for geo-stationary GPS receiver validation
-	\item Designed astrodynamics force model for AFRL satellite science experiment
-        \item Developed attitude control simulations for CMG test-bed known as Attitude Control System Proving Ground~(ACSPG) which is the largest spherical air-bearing testbed in the world used for attitude control and determination research 
+        \item Directed 6 member team in developing orbit determination software for flight validation of GPS system. 
+		\item Designed custom astrodynamics force model for AFRL flight satellite program. 
+        \item Led \$5M lab development program.  Responsible for procurement, design, and integration of large spherical air-bearing platform and hardware in the loop attitude control system. 
         \item Developed ground transmitter geolocation via satellite time difference of arrival algorithm
         \item Led incorporation of satellite relative motion dynamics, guidance and control for simulation on embedded ground based robotic system
-        \item Implemented miniature inertial measurement (IMU) sensors for attitude control experiments
-        \item Managed space situational awareness  software development by leading diverse team of academia, industry, and government in an effort to develop integrated orbit determination software
+        \item Managed \$4M DARPA space situational awareness contract by leading diverse team of academia, industry, and government in an effort to develop integrated orbit determination software
     \end{innerlist}
 
 \item[] \textit{Deputy Space Vehicles Lead, Responsive Space Squadron\\}
@@ -468,18 +459,17 @@ Colorado Springs, CO
 	\item Assessed and served as on-site government inspector of 200+ satellite test plans dealing with crucial flight hardware leading to successful test campaign and mitigated possible launch delays
     \end{innerlist}
 
-\end{lonelist}
+\end{lonelist} % AF work
 
 \section{Conference Presentations} 
 	
 \begin{innerlist}
-	\item \bibentry{Kulumani2013}
+	\item \bibentry{kulumani2013} 
 \end{innerlist}
 
 \section{Professional Memberships}
 
-American Institute of Aeronautics and Astronautics~(AIAA), Member,
-2012--present
+American Institute of Aeronautics and Astronautics~(AIAA), Member, 2012--present
 
 \halfblankline
 
@@ -487,87 +477,12 @@ Sigma Gamma Tau, Member, 2008--present
 
 %\halfblankline use between items
 
-\section{Qualifications and Skills}
-
-\href{http://www.mathworks.com/products/matlab/}{\Matlab/Simulink} skill set:
-%
-\begin{innerlist}
-    \item  Dynamical system simulation, astrodynamics applications, Linear algebra, Monte Carlo analysis, Optimization,
-        GUI development, statistics, estimation, data processing, visualization
-\end{innerlist}
-
-\halfblankline
-
-Design Software:
-\begin{innerlist}
-	\item Solidworks, AutoCAD
-\end{innerlist}
-
-\halfblankline
-
-Computer Programming:
-%
-\begin{innerlist}
-    \item Experience with C, C$+$$+$, UNIX shell scripting, DVCS (Git)
-\end{innerlist}
-
-\halfblankline
-
-Desktop Editing and Productivity Software:
-%
-\begin{innerlist}
-    \item \TeX{} (\LaTeX{}, \BibTeX{}, PSTricks),
-    \item Microsoft Office, OpenOffice.org, LibreOffice, Google Docs
-    \item GIMP, InkScape
-\end{innerlist}
-
-\halfblankline
-
-Operating Systems:
-%
-\begin{innerlist}
-    \item Microsoft Windows family, Apple OS X, Linux/UNIX
-\end{innerlist}
-
-\halfblankline
-
-Hardware Systems:
-\begin{innerlist}
-	\item PhaseSpace motion capture system
-	\item VectoNav Inertial Measurement Unit
-	\item Embedded robotic systems
-\end{innerlist}
-
 %\halfblankline
 %
 %Technical Training
 %\begin{innerlist}
 %\item First aid training including Self Aid Buddy Care~(SABC), CPR Heartsaver
 %\end{innerlist}
-
-\section{Expertise}
-
-Control Theory and Engineering:
-%
-\begin{innerlist}
-    \item Linear and Nonlinear Systems Theory, Feedback, Optimization, Digital Control
-\end{innerlist}
-
-\halfblankline
-
-Communications and Signal Processing:
-%
-\begin{innerlist}
-    \item Probability, Random Variables, Stochastic Processes, Estimation, Statistical Inference
-\end{innerlist}
-
-\halfblankline
-
-Astronautical Engineering:
-%
-\begin{innerlist}
-    \item Astrodynamics, Orbit Determination, Attitude Dynamics, Analytical dynamics, Rocket Propulsion  
-\end{innerlist}
 
 \section{Awards}
 Responsive Space Squadron
@@ -586,7 +501,9 @@ United States Air Force Academy
 
 \section{Security Clearance}
 
-Department of Defense Top Secret SCI (awarded: 2010)
+Cleared for Top Secret information and granted access to sensitive compartmented information based on a single scope background investigation completed on 21 June 2010.
+
+Please contact SSO Kirtland Security at 505-846-5017 for additional clearance information.
 
 % \section{Citizenship}
 %
@@ -620,9 +537,7 @@ Department of Defense Top Secret SCI (awarded: 2010)
 %\url{http://www.tedpavlic.com/facjobsearch/}.
 %
 
-\bibliographystyle{plain}
-%\bibliography{library}
-\nobibliography{library}
+
 
 \end{document}
 
