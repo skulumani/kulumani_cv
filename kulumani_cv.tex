@@ -326,8 +326,8 @@ Washington, DC  20008  USA}
 
 \section{Research Interests}
 
-\textbf{Astronautical engineering with applications in control systems theory:}
-Focus on astrodynamics, spacecraft attitude dynamics and control, and optimization
+\textbf{Dynamics and Control of Aerospace Systems}
+Application of geometric mechanics and control to systems evolving on nonlinear manifolds.
 
 %\section{Academic Appointments}
 %
@@ -374,19 +374,20 @@ Focus on astrodynamics, spacecraft attitude dynamics and control, and optimizati
 \section{Education}
 
 \href{http://www.gwu.edu/}{\textbf{George Washington University}}, Washington, DC
-\hfill \textbf{August 2014 to Present}
+\hfill {Aug~2014-present}
 \begin{lonelist}
 
 \item[] PhD, \href{http://www.mae.seas.gwu.edu/}{Mechanical and Aerospace Engineering}
         \begin{innerlist}
-        	\item[] Area of Study: Dynamics and Control 
+        	\item[] Area of Study: Geometric Mechanics and Control of Aerospace Systems 
+			\item[] Advisor: Taeyoung Lee
         \end{innerlist}
 \end{lonelist}
 
 \blankline
 
 \href{http://www.purdue.edu/}{\textbf{Purdue University}}, West Lafayette, IN
-\hfill \textbf{January 2011 to December 2013}
+\hfill {Jan~2011-Dec 2013}
 \begin{lonelist}
 
 \item[] M.S.,
@@ -400,7 +401,7 @@ Focus on astrodynamics, spacecraft attitude dynamics and control, and optimizati
 \blankline
 
 \href{http://www.usafa.af.mil/}{\textbf{United States Air Force Academy}}, Colorado Springs, CO 
-\hfill \textbf{June 2005 to May 2009}
+\hfill {Jun~2005-May~2009}
 \begin{lonelist}
 \item[] B.S.,
         \href{http://www.usafa.edu/df/dfas/}
@@ -419,41 +420,88 @@ Experience with Vicon/PhaseSpace motion capture systems
 
 \textbf{George Washington University}, Washington DC
 	\begin{lonelist}
-		\item[] \textit{Graduate Research/Teaching Assistant} \hfill \textbf{August~2014 to Present}
+		\item[] \textit{Graduate Research/Teaching Assistant} \hfill {Aug~2014-present}
 		\begin{innerlist}
-			\item Graduate teaching assistant for Engineering Drawing and Computer graphics course. Responsible for teaching and grading technical drawing assignments
-			\item Performing research in the Flight Dynamics and Control laboratory with applications in optimal control and low energy orbital transfers. 
+			\item Graduate teaching assistant for Engineering Drawing and Computer graphics course.
+			Responsible for teaching the fundamentals of sound engineering design and use of technical design software.
+			Developed assignments and examinations to test students ability in applying principles in technical drawing.
+			\item Performing research in the Flight Dynamics and Control laboratory with applications in geometric mechanics and control. 
+			Developing methods of continuous low thrust orbital transfers by leveraging the nonlinear manifolds of the three body problem.
+			\item Applying computational geometric mechanics to develop algorithms which preserve the geometric properties of mechanical systems to obtain accurate numerical results and long term stability.
+			\item Designing constrained geometric control for the coupled translation and rotational dynamics of spacecraft.
+			This allows for globally defined control systems that track a desired trajectory while simultaneously avoiding obstacles or path constraints.
 		\end{innerlist}
-
+		
+		\item[] \textit{Space Scholar, AFRL Scholar Program} \hfill {Jun~2015-Jul~2015}
+		\begin{innerlist}
+			\item Investigated combined translational and rotational control techniques for spacecraft rendezvous and proximity operations in the presence of constraints.
+			Developed a geometric nonlinear controller which allows for global attitude tracking.
+			\item The control system is developed directly on the nonlinear manifold and defined globally without the need of local parameterizations.
+			Attitude constraints are incorporated directly on the nonlinear manifold through the use of barrier functions and allow for excellent convergence properties in the presence of constraints. 
+		\end{innerlist}
 	\end{lonelist}
 	
 \blankline
 
-\textbf{United States Air Force}, Kirtland AFB, NM
+\textbf{United States Air Force, Captain}
 \begin{lonelist}
 
-\item[] \textit{Captain, Lead Test Engineer, Guidance, Navigation, \& Control Group \\}
-\textit{Air Force Research Laboratory (AFRL/RVSVC)}%
-    \hfill \textbf{August~2011 to July~2014}
+\item[] \textit{Threat Systems Engineer, Missile and Space Intelligence Center \\
+				Defense Intelligence Agency~(MSIC/DIA)}
+				\hfill {Sep~2014-present}
+		\begin{innerlist}
+			\item Responsible for the development of computational tools for the analysis of rocket and missile systems.
+			Developed software to accurately model the aerodynamic forces and effects on rocket systems through all phases of flight.
+			Accurate modeling of the aerodynamics allows for improved simulation accuracy and performance predictions.
+			\item Developed software to accurately interface operational sensor systems.
+			Implemented an extensive \Matlab / Python library to simulate and analyze missile systems and sensors. 
+		\end{innerlist}
+		
+\item[] \textit{Lead Test Engineer, Guidance, Navigation, \& Control Group \\
+	Air Force Research Laboratory (AFRL/RVSVC)}%
+    \hfill {Aug~2011-Sep~2014}
     \begin{innerlist}
-        \item Directed 6 member team in developing orbit determination software for flight validation of GPS system. 
-		\item Designed custom astrodynamics force model for AFRL flight satellite program. 
-        \item Led \$5M lab development program.  Responsible for procurement, design, and integration of large spherical air-bearing platform and hardware in the loop attitude control system. 
-        \item Developed ground transmitter geolocation via satellite time difference of arrival algorithm
-        \item Led incorporation of satellite relative motion dynamics, guidance and control for simulation on embedded ground based robotic system
-        \item Managed \$4M DARPA space situational awareness contract by leading diverse team of academia, industry, and government in an effort to develop integrated orbit determination software
+        \item Directed a 6 member team in developing orbit determination software and designing an observation campaign for the ANGELS flight experiment.
+        An Unscented Kalman Filter~(UKF) was developed to verify and validated the performance of a GPS receiver in geostationary orbit.
+        Additionally, a ground based collection strategy, incorporating AFSSN sensors, was developed and tested on operational satellites.
+        The AFRL ANGELS vehicle launched in 2014 to advance autonomous rendezvous and proximity operation control algorithms.
+        The UKF and ground based observation campaign was critical for accurate navigation and allowed for more aggressive maneuvers. 
+		\item Designed custom astrodynamics force model for the ANGLES flight experiment.
+		Incorporated the effects of solar radiation pressure, attitude control system, Earth gravitational models, and thruster uncertainties to predict the expected performance of the spacecraft.
+		Analysis predicted a coupling between rotational and translational motion during angular momentum desaturation burns.
+		A orientation profile was developed which minimized the accumulation of undesired angular momentum and allowed for extended quiescent periods in support of orbit determination activities.
+        \item Led \$5M lab development program to develop an in situ attitude dynamics and control simulator.  
+        Responsible for procurement, design, and integration of the largest spherical air-bearing platform in the world.
+        Developed software to interface with inertial measurement units, motion capture systems, and control hardware to allow for hardware in the loop system testing.
+        The facility is currently being used to validate future flight attitude control actuators and algorithms. 
+        \item Developed a method for space based geolocation via time difference of arrival signals.
+        Implemented geometric techniques to develop a closed form analytical solution to locate a noncooperative electromagnetic signal based on the time of arrival to a formation of satellites.
+        \item Led the development of a satellite relative motion simulator using embedded ground based robotic systems.
+        Designed the software to allow for accurate scaling and simulation of spacecraft motion.
+        Directly implemented a motion capture system on embedded hardware to allow for accurate positioning and control. 
+        %\item Managed \$4M DARPA space situational awareness contract by leading diverse team of academia, industry, and government in an effort to develop integrated orbit determination software
     \end{innerlist}
 
 \item[] \textit{Deputy Space Vehicles Lead, Responsive Space Squadron\\}
 	\textit{Space Development and Test Directorate (SDTD/SDDR)}%
-    \hfill \textbf{May 2009 to August 2011}
+    \hfill {May~2009-Aug~2011}
     
     \begin{innerlist}
-        \item Responsible for development, integration, test, \& launch of ORS-1 (Operationally Responsive Space) satellite which was the first operational satellite developed under the ORS office and supports US Central Command Battlespace Awareness
-        \item Extensive experience with technical management of diverse contractor/government teams leading to successful ORS-1 launch and operations
-        \item Resolved \$600K satellite flight sensor issues and prevented ORS-1 launch delays by ensuring vital hardware repairs were completed correctly.
-	\item Firsthand experience monitoring 100+ days of integration and testing of ORS-1 satellite leading to on-time launch from Wallops Island, VA on 29 June 2011
-	\item Assessed and served as on-site government inspector of 200+ satellite test plans dealing with crucial flight hardware leading to successful test campaign and mitigated possible launch delays
+        \item Responsible for development, integration, test, \& launch of ORS-1 (Operationally Responsive Space) satellite
+         ORS-1 was the first operational satellite developed under the ORS office and supports US Central Command Battlespace Awareness.
+         An accelerated development cycle allowed for the integration and launch in under 2 years.
+        \item Extensive experience with technical management of diverse contractor/government teams leading to successful ORS-1 launch and orbit operation.
+        Managed a team of 5 to ensure the correct integration and testing of the space vehicle.
+        Ensured mission requirements were being met during the integration period. 
+        \item Resolved a \$600K satellite flight sensor failure.
+        Directly managed the repair analysis team to prevent launch delays and ensure the system capability.
+        Monitored the hardware repair process and verified they were completed correctly.
+		\item Firsthand experience monitoring 100+ days of integration and testing of ORS-1.
+		Sole space vehicles lead during launch site operations at Wallops Island, VA.
+		Ensured correct procedures and standards leading to on-time launch on 29 June 2011
+		\item Assessed and served as on-site government inspector of 200+ satellite test plans.
+		 Verified technical analysis and testing procedures or all flight hardware of ORS-1. 
+		 Test plans were critical in ensuring correct performance of both ground and space hardware and critical to mission success.
     \end{innerlist}
 
 \end{lonelist} % AF work
@@ -466,15 +514,15 @@ Experience with Vicon/PhaseSpace motion capture systems
 
 \section{Professional Memberships}
 
-American Astronautical Society~(AAS), Member, 2015--present
+American Astronautical Society~(AAS), Member \hfill {2015-present}
 
 \halfblankline
 
-American Institute of Aeronautics and Astronautics~(AIAA), Member, 2012--present
+American Institute of Aeronautics and Astronautics~(AIAA), Member \hfill {2012-present}
 
 \halfblankline
 
-Sigma Gamma Tau, Member, 2008--present
+Sigma Gamma Tau, Member \hfill  {2008-present}
 
 %\halfblankline use between items
 
@@ -488,24 +536,26 @@ Sigma Gamma Tau, Member, 2008--present
 \section{Awards} % insert military medals here as well
 George Washington University
 \begin{innerlist}
-	\item Most Innovative/Creative Project Award, 5th Annual Student Engineering Competition Society of Satellite Professionals International~(SSPI) Mid-Atlantic Regional Chapter (2015)
-	\item Graduate Research Fellowship, George Washington University (2014)
+	\item {Most Innovative/Creative Project Award, 
+	5th Annual Student Competition Society of Satellite Professionals International~(SSPI) \\
+	Systematic design of optimal low-thrust orbital transfers in the three-body problem} \hfill {2015}  
+	\item Graduate Research Fellowship, George Washington University \hfill {2014}
 \end{innerlist}
 
 \halfblankline
 
 Responsive Space Squadron
 \begin{innerlist}
-	\item Rotary National Award for Space Achievement Foundation Stellar Award nomination  for successful ORS-1 mission accomplishments (2011) 
-	\item ORS-1 named by C4ISR Journal as one of the top 25 most important intelligence, surveillance and reconnaissance concepts of the year (2011)
+	\item Rotary National Award for Space Achievement Foundation Stellar Award nomination  for successful ORS-1 mission accomplishments \hfill {2011} 
+	\item ORS-1 named by C4ISR Journal as one of the top 25 most important intelligence, surveillance and reconnaissance concepts of the year \hfill {2011}
 \end{innerlist}
 
 \halfblankline
 
 United States Air Force Academy
 \begin{innerlist}
-\item Awarded Commandant/Dean pin 8 consecutive semesters for high military/academic performance (2005-2009)
-\item Top Academic Performer - Astrodynamics 321 (2007)
+\item Commandant/Dean pin for high military/academic performance \hfill {2005-2009}
+\item Top Academic Performer - Astrodynamics 321 \hfill {2007}
 \end{innerlist}
 
 \section{Security Clearance}
