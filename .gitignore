@@ -8,5 +8,8 @@
 
 *.bbl
 
+Icon?
+
+DS_STORE
 
 desktop.ini
