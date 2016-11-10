@@ -75,8 +75,12 @@
 % Provides special list environments and macros to create new ones
 \usepackage[shortlabels]{enumitem}
 
-\usepackage{natbib}
-\usepackage{bibentry}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{library.bib}
+\ExecuteBibliographyOptions{}
+\AtEveryCitekey{%
+\clearfield{url}%
+}
 
 
 %% Reference the last page in the page number
@@ -266,8 +270,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\bibliographystyle{plain}
-\nobibliography{library}
 
 \makeheading{Shankar~Kulumani}
 
@@ -507,17 +509,21 @@ Hardware: Vicon/PhaseSpace motion capture systems
 \end{lonelist} % AF work
 
 \section{Publications} 
-	
-\begin{innerlist}
-    \item \bibentry{kulumani2016e}
-    \item \bibentry{kulumani2016d}
-    \item \bibentry{kulumani2016c}
-	\item \bibentry{kulumani2016a}
-	\item \bibentry{kulumani2016}
-	\item \bibentry{kulumani2015}
-	\item \bibentry{kulumani2013} 
-\end{innerlist}
-
+\begin{lonelist}	
+    \item[] \textbf{Journal Publications}
+    \begin{innerlist}
+        \item \fullcite{kulumani2016e}
+        \item \fullcite{kulumani2016a}
+    \end{innerlist}
+    \item[] \textbf{Conference Publications}
+    \begin{innerlist}
+        \item \fullcite{kulumani2016d}
+        \item \fullcite{kulumani2016c}
+        \item \fullcite{kulumani2016}
+        \item \fullcite{kulumani2015}
+        \item \fullcite{kulumani2013} 
+    \end{innerlist}
+\end{lonelist}
 \section{Professional Memberships}
 
 Institute of Electrical and Electronics Engineers~(IEEE), Member \hfill {2016-present}
