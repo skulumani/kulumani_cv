@@ -1,0 +1,26 @@
+%!TEX root = kulumani_long.tex
+% Formatting
+\input{my_macros}
+
+\usepackage[T1]{fontenc}
+\usepackage{calc}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+% \reversemarginpar
+\usepackage[paper=letterpaper,margin=1in]{geometry}
+
+\usepackage[backend=biber]{biblatex}
+\addbibresource{library.bib}
+\ExecuteBibliographyOptions{}
+\AtEveryCitekey{%
+    \clearfield{url}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Macros for formatting
