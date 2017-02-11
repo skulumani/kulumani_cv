@@ -1,0 +1,22 @@
+\newlength{\rcollength}\setlength{\rcollength}{1.8in}%
+\newlength{\spacewidth}\setlength{\spacewidth}{20pt}
+\phantomsection
+\addcontentsline{toc}{section}{Contact Information}
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength-\spacewidth}@{}p{\spacewidth}@{}p{\rcollength}}%
+
+% Address box
+\parbox{\textwidth-\rcollength-\spacewidth}{%
+2800 Woodley Rd NW\\
+Washington, DC  20008  USA}
+&
+% Uncomment to add a vertical bar in middle of contact information
+%{\vrule width 0.5pt}
+\parbox[m][2\baselineskip]{\spacewidth}{} &
+
+% Non-snail-mail contact information
+\parbox{\rcollength}{%
+\textit{Mobile:} 630-336-6257 \\
+\textit{E-mail:} \href{mailto:skulumani@gwu.edu}{skulumani@gwu.edu} \\
+\textit{Web: } \href{https://shankarkulumani.com}{shankarkulumani.com}}
+
+\end{tabular}

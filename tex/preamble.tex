@@ -1,0 +1,28 @@
+%!TEX root = ../kulumani_cv.tex
+% Formatting
+\input{my_macros}
+
+\usepackage[T1]{fontenc}
+\usepackage{calc}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage{tabularx}
+
+\usepackage[paper=letterpaper,margin=1in]{geometry}
+
+\usepackage[backend=biber, style=numeric, defernumbers=true]{biblatex}
+\addbibresource{library.bib}
+\ExecuteBibliographyOptions{}
+\AtEveryBibitem{%
+\clearfield{url}%
+}
+
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Macros for formatting
+\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
