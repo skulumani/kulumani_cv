@@ -24,4 +24,6 @@ tlmgr update --self --all --no-auto-install
 
 echo "Finished updating TexLive"
 
+# need to clone texmf to home directory (for my packages)
+git clone https://github.com/skulumani/texmf.git ~/texmf
 
