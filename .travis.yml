@@ -1,0 +1,24 @@
+sudo: false
+language: generic
+matrix:
+  include:
+  - os: linux
+cache:
+  directories:
+  - "/tmp/texlive"
+  - "$HOME/.texlive"
+before_install:
+- bash ./utilities/travis_setup.sh
+- export PATH="/tmp/texlive/bin/x86_64-linux:$PATH"
+script:
+- latexmk -pdf -interaction=nonstopmode -halt-on-error dissertation.tex
+after_success:
+- bash ./utilities/deploy.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: d9xsMxBSxzrVWOVGyynUpmkJSD2tS0WPZQYZOAM9A5C28/nCpn7y2bllTNEOsku0Ufx5JyrLYbZo2PeWLYL/6sIcoFQBGlHEvb4g6dv+vcJIh1MEPWM28JhMPYs7wnJvmK4iOG+YjpT1GFBYYoygVoyXupNp2OM2nV2vmjVPftdIs9alw7FlucUVkKWBeIxXwqa7dY/z1K9SYAnMCP59o4fZB4fza5XPLtbNf1rQktrDcJz+MIMBgF/jkw8JixUManlcwWe1MLmBNPZQyqLT9/W8x7dsVVX8tVCEVORlvyxIx8lhjycsTaQ6+UFHQBCG03wLPaAI2IdAAjschZc5QDTtkxjWb2ZyV1EmdaHi1eFhreHg3+p8yeB1rDS6NFNzE240n+aiJDOHQq3N9mmnaWcFJYRYuZAloVmw4i6hIogACfJdYYltegXXbv5LbsuX9RV3TheDwJAbrXWNVWWqR0ia+aMEdBZpsKCDcUay01UA4hObGd/Sv+VGQvyKOnzrQI6/6r2hIK1H/weBsJxnv7z6SWBsqFsTf+ICECPuK2zHNDeycyRFCnqTJZHpNGNuIOiJuFQRFP0zTI+qesLHZMVp5GdANh3A9vEQ65/Dk5nKsMhwgV6D6v74nHlYhCfrmEP/PcTD98L77HDPpu3ccNJ8rVS7Uqt6c35IsSX1qE0=
+  file: kulumani_cv.pdf
+  skip_cleanup: true
+  on:
+    repo: skulumani/kulumani_cv
