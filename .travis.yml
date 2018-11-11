@@ -23,3 +23,4 @@ deploy:
   on:
     repo: skulumani/kulumani_cv
     branch: master
+    tags: true
