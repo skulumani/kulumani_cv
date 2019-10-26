@@ -1,6 +1,21 @@
+# Keywords
+
+* Astronomical algorithms
+* Software
+* Research
+* Papers
+* Scientific or Technical meetings
+* Celestial Navigation
+* Prediction and Characteristics of Astronomical Phenomena
+* C, C++, Fortran, Python
+* Numerical Methods
+* Test procedures
+* Independent Research
+* Technical or Scientific papers
+
 ## Duties
 
-You will develop and maintain the astronomical software products.
+* You will develop and maintain the astronomical software products.
 
 You will verify accuracy of Astronomical Applications Department software products by designing and executing tests to verify results from products.
 
