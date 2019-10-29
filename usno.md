@@ -9,10 +9,10 @@
 * Prediction and Characteristics of Astronomical Phenomena
 * C, C++, Fortran, Python
 * Numerical Methods
-* Test procedures
+* Test procedures/plans
 * Independent Research
 * Technical or Scientific papers
-
+* Present results at scientific meetings
 ## Duties
 
 * You will develop and maintain the astronomical software products.
