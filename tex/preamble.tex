@@ -8,9 +8,9 @@
 \usepackage{parskip}
 \usepackage{tabularx}
 
-\usepackage[backend=biber, style=numeric, defernumbers=true, sorting=ydnt]{biblatex}
+% \usepackage[backend=biber, defernumbers=true, sorting=ydnt]{biblatex}
 \addbibresource{library.bib}
-\ExecuteBibliographyOptions{}
+\ExecuteBibliographyOptions[]{sorting=ydnt,defernumbers=true}
 \AtEveryBibitem{%
 \clearfield{url}%
 }
