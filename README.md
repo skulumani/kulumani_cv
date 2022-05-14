@@ -3,7 +3,7 @@
 | [![Travis][travis_shield]][travis]       | [![Github Release][release_shield]][github_release] | [![Github Version][version_shield]][github_version] | [![Github Last Commit][last_commit_shield]][github_last_commit] | [![Github commit activity][activity_shield]][github_activity] |
 
 
-[travis_shield]: https://travis-ci.org/skulumani/kulumani_cv.svg?branch=master 
+[travis_shield]: https://app.travis-ci.com/skulumani/kulumani_cv.svg?branch=master&status=started 
 [release_shield]: https://img.shields.io/github/release/skulumani/kulumani_cv.svg
 [version_shield]: https://badge.fury.io/gh/skulumani%2Fkulumani_cv.svg
 [last_commit_shield]: https://img.shields.io/github/last-commit/skulumani/kulumani_cv.svg
